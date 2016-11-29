@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.joseph.destinationdota.Main2Activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/main2Img"
+            android:src="@drawable/dotaart"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:text="Large Text"
+            android:id="@+id/Name"
+            android:layout_below="@+id/main2Img"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Details of Hero/Item (Probably from a database)"
+            android:id="@+id/info"
+            android:textColor="#479"
+            android:textStyle="italic"
+            android:layout_below="@+id/Name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/info"
+            android:paddingTop="20dp"
+            android:id="@+id/skillHeading"
+            android:text="Skills"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:paddingTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/skill1"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/skillHeading" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/skill1"
+            android:id="@+id/skill1txt"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/skill2"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/skill1txt" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_below="@id/skill2"
+            android:layout_height="wrap_content"
+            android:id="@+id/skill2txt"/>
+        <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/skill3"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/skill2txt" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/skill3"
+            android:layout_height="wrap_content"
+            android:id="@+id/skill3txt"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/skill4"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/skill3txt" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/skill4"
+            android:id="@+id/skill4txt"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/skillIntro"
+            android:text="Skill Introduction"
+            android:layout_below="@id/skill4txt"
+            android:textSize="20sp"/>
+
+        <WebView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/webview"
+            android:layout_below="@id/skillIntro">
+        </WebView>
+
+    </RelativeLayout>
+
+
+</ScrollView>

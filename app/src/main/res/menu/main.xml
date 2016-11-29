@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <group>
+        <item
+            android:id="@+id/str"
+            android:icon="@drawable/st_img"
+            android:title="Strength"
+            app:showAsAction="always"/>
+
+        <item
+            android:id="@+id/agi"
+            android:icon="@drawable/ag_img"
+            android:title="Agility"
+            app:showAsAction ="always">
+        </item>
+        <item
+            android:id="@+id/intel"
+            android:icon="@drawable/in_img"
+            android:title="Intelligence"
+            app:showAsAction ="always"/></group>
+
+</menu>

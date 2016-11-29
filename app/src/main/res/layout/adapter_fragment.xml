@@ -1,0 +1,15 @@
+<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background1"
+    android:id="@+id/adapterGrid"
+    android:gravity="center"
+    android:columnWidth="90dp"
+    android:paddingTop="60dp"
+    android:numColumns="auto_fit"
+    android:verticalSpacing="10dp"
+    android:stretchMode="columnWidth"
+    tools:context="com.example.joseph.destinationdota.hero">
+
+</GridView>

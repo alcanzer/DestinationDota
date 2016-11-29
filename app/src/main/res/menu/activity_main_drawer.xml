@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/new_frag"
+            android:icon="@drawable/qm2"
+            android:title="New"/>
+
+        <item
+            android:id="@+id/hero_frag"
+            android:icon="@drawable/nyx_icon"
+            android:title="Hero">
+        </item>
+        <item
+            android:id="@+id/item_frag"
+            android:icon="@drawable/observer_ward_model"
+            android:title="Items" />
+        <item
+            android:id="@+id/patch_frag"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Patches" />
+        <item
+            android:id="@+id/twitch_frag"
+            android:icon="@drawable/twitch"
+            android:title="Twitch" />
+        <item
+            android:id="@+id/leaderboard"
+            android:icon="@drawable/leader"
+            android:title="Leaderboard" />
+    </group>
+
+
+</menu>
