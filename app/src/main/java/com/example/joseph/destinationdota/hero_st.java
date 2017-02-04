@@ -13,6 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
+
+import rm.com.longpresspopup.LongPressPopup;
+import rm.com.longpresspopup.LongPressPopupBuilder;
 
 /**
  * Created by Joseph on 11/15/2016.
@@ -20,6 +24,7 @@ import android.widget.GridView;
 public class hero_st extends Fragment {
 
     GridView gridView;
+    ImageView imV;
     Integer img_id[] = {R.drawable.h_abbadon_sb,R.drawable.h_alchemist_sb, R.drawable.h_axe_sb,
             R.drawable.h_beastmaster_sb, R.drawable.h_brewmaster_sb,R.drawable.h_bristleback_sb,R.drawable.h_cent_sb, R.drawable.h_chaos_knight_sb,
             R.drawable.h_clockwork_sb, R.drawable.h_doom_bringer_sb,
@@ -50,10 +55,30 @@ public class hero_st extends Fragment {
         setHasOptionsMenu(true);
         View v = inflater.inflate(R.layout.adapter_fragment, container, false);
         gridView = (GridView) v.findViewById(R.id.adapterGrid);
+        imV = new ImageView(getActivity());
         gridView.setAdapter(new Adapter(v.getContext(), img_id, hero_name));
+        gridView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+                imV.setImageResource(img_id[i]);
+                imV.setScaleType(ImageView.ScaleType.FIT_CENTER);
+                Toaster.show(getActivity(), hero_name[i], true);
+                return true;
+            }
+        });
+
+        LongPressPopup popup = new LongPressPopupBuilder(getActivity())// A Context object for the builder constructor
+                .setTarget(gridView)// The View which will open the popup if long pressed
+                .setPopupView(imV)
+                .setLongPressDuration(750)
+                .setDismissOnLongPressStop(true)
+                .setDismissOnBackPressed(true)
+                .setCancelTouchOnDragOutsideView(false)
+                .setAnimationType(LongPressPopup.ANIMATION_TYPE_FROM_CENTER)// The View to show when long pressed
+                .build();
+        popup.register();
         // Inflate the layout for this fragment
         return v;
-
     }
 
     @Override
@@ -97,12 +122,142 @@ public class hero_st extends Fragment {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(getActivity(), Main2Activity.class);
-                intent.putExtra("id", i);
-                intent.putExtra("page","hero");
-                startActivity(intent);
+                switch(i){
+                    case 0:
+                        startAct(0);
+                        break;
+                    case 1:
+                        startAct(1);
+                        break;
+                    case 2:
+                        startAct(5);
+                        break;
+                    case 3:
+                        startAct(8);
+                        break;
+                    case 4:
+                        startAct(11);
+                        break;
+                    case 5:
+                        startAct(12);
+                        break;
+                    case 6:
+                        startAct(14);
+                        break;
+                    case 7:
+                        startAct(15);
+                        break;
+                    case 8:
+                        startAct(18);
+                        break;
+                    case 9:
+                        startAct(24);
+                        break;
+                    case 10:
+                        startAct(25);
+                        break;
+                    case 11:
+                        startAct(27);
+                        break;
+                    case 12:
+                        startAct(28);
+                        break;
+                    case 13:
+                        startAct(29);
+                        break;
+                    case 14:
+                        startAct(35);
+                        break;
+                    case 15:
+                        startAct(37);
+                        break;
+                    case 16:
+                        startAct(41);
+                        break;
+                    case 17:
+                        startAct(42);
+                        break;
+                    case 18:
+                        startAct(45);
+                        break;
+                    case 19:
+                        startAct(48);
+                        break;
+                    case 20:
+                        startAct(50);
+                        break;
+                    case 21:
+                        startAct(51);
+                        break;
+                    case 22:
+                        startAct(53);
+                        break;
+                    case 23:
+                        startAct(59);
+                        break;
+                    case 24:
+                        startAct(62);
+                        break;
+                    case 25:
+                        startAct(67);
+                        break;
+                    case 26:
+                        startAct(69);
+                        break;
+                    case 27:
+                        startAct(75);
+                        break;
+                    case 28:
+                        startAct(81);
+                        break;
+                    case 29:
+                        startAct(85);
+                        break;
+                    case 30:
+                        startAct(87);
+                        break;
+                    case 31:
+                        startAct(91);
+                        break;
+                    case 32:
+                        startAct(92);
+                        break;
+                    case 33:
+                        startAct(94);
+                        break;
+                    case 34:
+                        startAct(95);
+                        break;
+                    case 35:
+                        startAct(97);
+                        break;
+                    case 36:
+                        startAct(98);
+                        break;
+                    case 37:
+                        startAct(99);
+                        break;
+                    case 38:
+                        startAct(100);
+                        break;
+                    case 39:
+                        startAct(109);
+                        break;
+                    default:
+                        startAct(i);
+                }
             }
         });
     }
+
+    public void startAct(int i){
+
+        Intent intent = new Intent(getActivity(), Main2Activity.class);
+        intent.putExtra("id", i);
+        intent.putExtra("page","hero");
+        startActivity(intent);
+
+    }
+
 
 }

@@ -153,11 +153,21 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     public Cursor getInfo(int i){
         String[] id = {Integer.toString(i)};
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor hero = db.rawQuery("SELECT Lore, Name FROM Hero WHERE ID = ?", id);
+        Cursor hero = db.rawQuery("SELECT Lore, Name, Skill_1, Skill_2, Skill_3, Skill_4, Skill_5, Video FROM Hero WHERE ID = ?", id);
         if (hero != null) {
             hero.moveToFirst();
         }
         return hero;
+    }
+
+    public Cursor getItemInfo(int i){
+        String[] id = {Integer.toString(i)};
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor it = db.rawQuery("SELECT Name, Lore, Ability_1, Desc_1, Ability_2, Desc_2 FROM Item WHERE ID = ?", id);
+        if (it != null) {
+            it.moveToFirst();
+        }
+        return it;
     }
     // Add your public helper methods to access and get content from the database.
     // You could return cursors by doing "return myDataBase.query(....)" so it'd be easy

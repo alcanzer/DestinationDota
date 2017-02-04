@@ -63,6 +63,7 @@ public class item extends Fragment {
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
                 imV.setImageResource(item_id[i]);
                 imV.setScaleType(ImageView.ScaleType.FIT_CENTER);
+                Toaster.show(getActivity(), item_name[i], true);
                 return true;
             }
         });

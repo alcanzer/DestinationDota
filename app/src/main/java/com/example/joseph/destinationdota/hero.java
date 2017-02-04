@@ -1,13 +1,10 @@
 package com.example.joseph.destinationdota;
 
 
-import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -17,7 +14,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import rm.com.longpresspopup.LongPressPopup;
 import rm.com.longpresspopup.LongPressPopupBuilder;
@@ -86,18 +82,18 @@ public class hero extends Fragment implements PopupInflaterListener,
         });
 
         LongPressPopup popup = new LongPressPopupBuilder(getActivity())// A Context object for the builder constructor
-                .setTarget(gridView)// The View which will open the popup if long pressed
-                .setPopupView(imV)
-                .setLongPressDuration(750)
-                .setDismissOnLongPressStop(true)
-                .setDismissOnBackPressed(true)
-                .setCancelTouchOnDragOutsideView(false)
-                .setAnimationType(LongPressPopup.ANIMATION_TYPE_FROM_CENTER)// The View to show when long pressed
-                .build();
-        popup.register();
-        // Inflate the layout for this fragment
-        return v;
-    }
+            .setTarget(gridView)// The View which will open the popup if long pressed
+            .setPopupView(imV)
+            .setLongPressDuration(750)
+            .setDismissOnLongPressStop(true)
+            .setDismissOnBackPressed(true)
+            .setCancelTouchOnDragOutsideView(false)
+            .setAnimationType(LongPressPopup.ANIMATION_TYPE_FROM_CENTER)// The View to show when long pressed
+            .build();
+    popup.register();
+    // Inflate the layout for this fragment
+    return v;
+}
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {

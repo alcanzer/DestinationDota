@@ -103,13 +103,24 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/skill4"
             android:id="@+id/skill4txt"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/skill5"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/skill4txt"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/skill5txt"
+            android:layout_below="@+id/skill5"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/skillIntro"
             android:text="Skill Introduction"
-            android:layout_below="@id/skill4txt"
+            android:layout_below="@id/skill5txt"
             android:textSize="20sp"/>
 
         <WebView
